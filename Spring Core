@@ -1,0 +1,22 @@
+
+1. Spring IoC Container.
+  - là trái tim của Spring project
+  - Quản lý vòng đời của bean: Khởi tạo, cấu hình và tương tác giữa các bean.
+  1) phân loại: có 2 loại container Giúp chúng ta có thể khởi tạo và quản lý các beans (đối tượng) trong Spring
+      - Bean Factory:  là interface trên cùng của Spring IOC container
+        Bean Creation -> Bean Configuration -> Bean Destruction 
+      - Application Context : là lớp con của BeanFactory
+    🌟 Sự khác nhau chính của BeanFactory và ApplicationContext là
+      - BeanFactory : Các bean được tạo ra khi chúng ta gọi phương thức getBean()
+      - ApplicationContext : chúng ta không cần phải chờ phương thức getBean được gọi mới tạo Bean. 
+      Mà khi container được start (khởi động) thì bean cũng đã được tạo ra do vậy không phải chờ gọi phương thức getBean.
+      
+   2) Khởi tạo Spring Container
+      Có 3 cách khởi tạo Spring Container
+      - AnnotationConfigApplicationContext : Sử dụng khi chúng ta viết 1 chương trình Java độc lập. 
+      Không phải là Java web mà chỉ là ứng dụng java thông thường.
+      - ClassPathXmlApplicationContext : Nếu như ta sử dụng XML để cấu hình cho Spring thì ta dùng ClassPathXmlApplicationContext để nạp các cấu hình đó thông qua file XML.
+      
+      - FileSystemXmlApplicationContext : Cũng tương tự như ClassPathXmlApplicationContext nhưng file cấu hình chúng ta không phải là XML và chúng ta chỉ định đường dẫn để nạp file đó là ở đâu.
+      
+   3) 
